@@ -28,15 +28,14 @@
             <div class="topnav">
             <h1>LeRoy Area Historical Society <span> LeRoy Michigan</span></h1>
             <nav id="mynav">
-                  <li>
-                        <ul><a href="#about">about leroy</a></ul>
-                        <ul><a href="#history">history</a></ul>
-                        <ul><a href="#fundraisers">fundraising</a></ul>
-                        <ul><a href="#hours">hours</a></ul>
-                        <ul><a href="#contact">contact</a></ul>
-                  </li>
-                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i></a>
+                        <a href="#about">about leroy</a>
+                        <a href="#history">history</a>
+                        <a href="#fundraisers">fundraising</a>
+                        <a href="#hours">hours</a>
+                        <a href="#contact">contact</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                              <i class="fa fa-bars"></i></a>
+
             </nav>
             </div>
       </header>
@@ -95,18 +94,15 @@
                   <p class="copyright">Page designed and developed by Rob Schuster Web Developer | copyright 2021 ©</p>
             </div>
       </footer>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 
   <!--  sandwich menu for page top  -->
 <script>
       function myFunction() {
-            var x = document.getElementById("myLinks");
-            if (x.style.display === "block") {
-                  x.style.display = "none";
+            var x = document.getElementById("mynav");
+            if (x.className === "topnav") {
+                  x.className += " responsive";
             } else {
-                  x.style.display = "block";
+                  x.className = "topnav";
             }
       }
 </script>
