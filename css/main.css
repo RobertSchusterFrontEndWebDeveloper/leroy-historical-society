@@ -88,6 +88,70 @@ textarea {
    ========================================================================== */
 /* Built October 30, 2021  */
 
+/* --  Navigation menu  --  */
+      /* -- setting top navigation background color  -- */
+.topnav {
+      background-color: darkblue;
+      overflow: hidden;
+}
+
+      /* --  navigaton bar links style --  */
+.topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+}
+
+      /* -- hover color change setting  -- */
+.topnav a:hover {
+      background-color: #ddd;
+      color: black;
+}
+
+      /*  --  Hide the links and show links depending on screen size  -- */
+.topnav .icon {
+      display: none;
+}
+
+      /*  --  under 600px hide all links except for first link, this link will show and hide topnav icon  --  */
+@media screen and (max-width: 700px){
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+            float: right;
+            display: block;
+      }
+}
+
+      /* --  set up the javascript for the sandwich icon and show text links when tapped  */
+@media screen and (max-width: 700px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+      }
+      .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+      }
+}
+
+      /* --  javascript function  --  */
+function myFunction() {
+      var x = document.getElementById("mynav");
+      if (x.className === "topnav") {
+            x.className += " responsive";
+      } else {
+            x.className = "topnav";
+      }
+}
+/* --   End navigation  --  */
+
 a {
       color: white;
       font-size: 1em;
@@ -104,6 +168,7 @@ h1 span {
       color: white;
       font-size: .35em;
       text-transform: uppercase;
+      text-align: center;
 }
 
 h2 {
@@ -144,6 +209,20 @@ p {
       color: white;
 }
 
+body {
+      font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+      max-width: 2400px;
+      width: 100%;
+      height: auto;
+}
+
 .banner-color {
       background-color: lightblue;
       padding: 1em 0 2em 0;
@@ -157,20 +236,6 @@ p {
       background-color: darkblue;
       margin: 1em 1.5em 1em 1.5em;
       padding: .75em;
-}
-
-body {
-      font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 1em;
-      margin: 0;
-      padding: 0;
-      max-width: 2400px;
-      width: 100%;
-      height: auto;
 }
 
 .contact {
@@ -254,9 +319,20 @@ main {
       width: 100%;
 }
 
-#contact-blocks {
+#contact-block {
       height: auto;
       width: 98%;
+}
+
+#contact-block h2 {
+      font-size: 1.3em;
+}
+
+#home {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
 }
 
 /* ==========================================================================
@@ -436,6 +512,16 @@ main {
             color: lightblue;
       }
 
+      #contact-block h2 {
+            font-size: 1.5em;
+      }
+
+      #home {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: row nowrap;
+      }
 }
 
 
